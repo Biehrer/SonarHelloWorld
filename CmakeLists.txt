@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.14.5)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# build customization: 
+# set USE_VISUALIZATION_LIB TRUE if the visualization project should be built; set FALSE otherwise
+
+# cleanup CmakeCache.txt 
+# CMake reads vars always first from cache (if the variable is set there)
+# If this cache value is removed each time, Cmake will always read this var from CmakeLists.txt
+
+
+# The main project
+project(HelloWorldSonar)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+
+#add_subdirectory(includes)
+
+add_executable(${PROJECT_NAME} main.cpp 
+#                        ${CMAKE_CURRENT_SOURCE_DIR}/includes/jones_plot_app.h
+#                        ${CMAKE_CURRENT_SOURCE_DIR}/includes/jones_plot_app.cpp
+#                        ${CMAKE_CURRENT_SOURCE_DIR}/includes/JonesPlot.ui
+				)
